@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jaredcunha/responsive-ls/issues"
   },
-  "homepage": "https://github.com/jaredcunha/responsive-ls#readme"
+  "homepage": "https://github.com/jaredcunha/responsive-ls#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
 }
