@@ -35,6 +35,6 @@ $(navUtilityToggle).on('click', function(){
 });
 
 
-$(".subnav__list").on("touchmove",function(){
+$(".subnav__list").on("touchstart",function(){
   $(".subnav__list--current").addClass('interacting');
 });
