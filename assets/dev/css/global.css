@@ -415,6 +415,10 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  min-height: 100%;
+}
+
 body.has-nav-open {
   overflow: hidden;
 }

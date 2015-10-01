@@ -12,6 +12,7 @@ html {
 }
 
 body {
+	min-height: 100%;
 	&.has-nav-open {
 		overflow: hidden;
 	}
