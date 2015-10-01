@@ -1,1 +1,15 @@
-body {background: red;}
+// Modules: All the variables and mixins
+
+
+// Partials: These are the selectors ==================================
+
+// Base styles: normailze and resets 
+@import "_partials/_base/normalize";
+@import "_partials/_base/reset";
+@import "_partials/_base/reusable_items";
+
+// Header: normailze and resets 
+@import "_partials/_header/navbar";
+@import "_partials/_header/top_bar";
+@import "_partials/_header/subnav";
+

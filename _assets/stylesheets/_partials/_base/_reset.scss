@@ -1,0 +1,22 @@
+@import "bourbon/bourbon";
+@import "_modules/_all";
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	font-size: 62.5%;
+}
+
+body {
+	&.has-nav-open {
+		overflow: hidden;
+	}
+}
+
+a {
+	text-decoration: none;
+}

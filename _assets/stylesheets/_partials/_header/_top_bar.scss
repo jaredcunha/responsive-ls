@@ -1,0 +1,25 @@
+@import "bourbon/bourbon";
+@import "_modules/_all";
+
+/* ===============================
+
+	CSS for the top bar
+
+==================================*/
+
+.top-bar {
+	@include clearfix;
+	@include rem_fallback(padding, 1, 0);
+	text-align: center;
+	position: relative;
+	border-bottom: 1px solid #979797;
+}
+
+.site-logo {
+	margin: 0 auto;
+	display: inline-block;
+	@include respond-to(expansionA) {
+		float: left;
+		margin: 0;
+	}
+}

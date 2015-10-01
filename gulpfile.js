@@ -7,9 +7,10 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
+    jshint = require('gulp-jshint'),
     del = require('del');
 
-// compile all your Sass
+// Compile all your Sass
 gulp.task('compileSass', function (){
     gulp.src(['./_assets/stylesheets/global.scss'])
         .pipe(maps.init())
@@ -18,31 +19,46 @@ gulp.task('compileSass', function (){
             errLogToConsole: false,
             outputStyle: 'expanded'
         }))
-        .pipe(maps.write('./'))
-        .pipe(gulp.dest('./assets/dev/css'));
-    gulp.src(['./assets/dev/css/global.css'])
+
+        .pipe(gulp.dest('./assets/dev/css'))
         .pipe(minifycss())
-        .pipe(gulp.dest('./assets/css'));
+        .pipe(maps.write('./'))
+        .pipe(gulp.dest('./assets/css/'));
 });
 
+// Move some files
+gulp.task('move', function(){
+    gulp.src('./_assets/images/*.svg')
+        .pipe(gulp.dest('./assets/images/svg'));
+});
+
+// Concat Javascripts
 gulp.task("concatScripts", function() {
-    gulp.src(['assets/js/libs/*.js', 'assets/js/plugins/*.js', 'assets/js/scripts/*.js'])
+    gulp.src(['./_assets/javascripts/_libs/*.js', './_assets/javascripts/_plugins/*.js', './_assets/javascripts/_scripts/*.js'])
             .pipe(concat('global.js'))
-            .pipe(gulp.dest('dist/dev/js'))
+            .pipe(gulp.dest('./assets/dev/js'))
             .pipe(uglify())
-            .pipe(gulp.dest('dist/prod/js'));
+            .pipe(gulp.dest('./assets/js/'));
 });
 
+// Lint the JavaScript
+gulp.task('lint', function() {
+    return gulp.src('./_assets/javascripts/_scripts/*.js')
+        .pipe(jshint())
+        .pipe(jshint.reporter('default'));
+});
+
+// Clean out old files
 gulp.task('clean', function() {
-  del(['assets/css', 'assets/js']);
+  del(['./assets/css', './assets/js', './assets/dev']);
 });
 
 
 // Files to watch
 gulp.task('watch', function(){
-    gulp.watch('_assets/stylesheets/**/*.scss', ['compileSass']);
-    gulp.watch('_assets/javascripts/**/*.js', ['scripts', 'lint', 'move']);
+    gulp.watch('./_assets/stylesheets/**/*.scss', ['compileSass']);
+    gulp.watch('./_assets/javascripts/**/*.js', ['concatScripts', 'lint']);
 });
 
 // The default gulp task
-gulp.task('default', ['watch'])
+gulp.task('default', ['clean', 'compileSass', 'concatScripts', 'watch']);

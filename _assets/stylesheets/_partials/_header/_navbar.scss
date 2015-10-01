@@ -1,0 +1,135 @@
+@import "bourbon/bourbon";
+@import "_modules/_all";
+
+/* ===============================
+
+	CSS for the navigation bar
+
+==================================*/
+
+// Variables exclusively for this section
+$navigationWidth: 27.5em;
+
+// Full navigation block
+.nav-block {
+	text-align: left;
+	position: absolute;
+	left: 0;
+	top: 0;
+	@include respond-to(expansionA) {
+		position: static;
+		float: left;
+	}
+}
+
+// Navigation Toggle
+.nav-menus-toggle {
+	@include rem-fallback(padding, 1.2);
+	display: inline-block;
+	color: #666;
+	@include respond-to(expansionA) {
+		@include hide;
+	}
+}
+
+// Navigation menus
+.nav-menus {
+	@include transform(translate3d(-$navigationWidth, 0, 0));
+	@include transition(transform .7s $niceEasing);
+	background: #fff;
+	border-right: 1px solid $lightGreyBorder;
+	width: $navigationWidth;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100%;
+	z-index: 1000;
+	@include respond-to(expansionA) {
+		@include transform(translate3d(0, 0, 0));
+		@include transition(none);
+		width: auto;
+		position: static;
+		box-shadow: none;
+		height: auto;
+		background: transparent;
+		border: 0;
+	}
+	&.open {
+		@include transform(translate3d(0, 0, 0));
+		box-shadow: 0 0 5px rgba(0,0,0,.5);
+		overflow-y: scroll;
+	}	
+}
+
+
+.close-nav {
+	@include respond-to(expansionA) {
+		@include hide;
+	}
+}
+
+// Main LivingSocial Verticals
+.nav-verticals {
+	@include respond-to(expansionA) {
+		display: inline-block;
+	}
+	&__list {
+		list-style: none;
+	}
+	&__item {
+		@include rem-fallback(font-size, 1.6);
+		@include respond-to(expansionA) {
+			display: inline-block;
+			padding: 0 1em;
+			margin: 0 1em;
+		}
+	}
+	&__link {
+		color: #666;
+	}
+}
+
+// Utility Nav
+.nav-utility {
+	position: relative;
+	@include respond-to(expansionA) {
+		display: inline-block;
+	}
+	&__toggle {
+		color: #9b9b9b;
+	}
+	&__list {
+		list-style: none;
+		@include respond-to(expansionA) {
+			@include hide;
+			@include transition(opacity .7s $niceEasing);
+			opacity: 0;
+			position: absolute; 
+			left: 0;
+			top: 10px;
+			box-shadow: 0 0 5px rgba(0,0,0,.5);
+			padding: 0;
+			width: 15em;
+			background: #fff;
+			z-index: 300;
+			&.open {
+				left: 0;
+				opacity: 1;
+				
+			}
+		}
+	}
+	&__item {
+		@include rem-fallback(font-size, 1.6);
+		padding: 0;
+		margin: 0;
+		display: block;
+		padding: .25em 1em;
+		@include respond-to(expansionA) {
+			@include rem-fallback(font-size, 1.4);
+		}
+	}
+	&__link {
+		color: #666;
+	}
+}

@@ -1,0 +1,11 @@
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@mixin respond-to($media) {
+  @if $media == expansionA {
+    @media only screen and (min-width: 680px) { @content; }
+  }
+  @else if $media == expansionB {
+    @media only screen and (min-width: 820px) { @content; }
+  }
+}

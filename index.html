@@ -2,22 +2,40 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div class="subnav-categories">
+	<nav class="subnav">
+		<ul class="subnav__list subnav__list--current">
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">restaurants</a>
+			</li>
+		</ul>
+		<ul class="subnav__list">
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">all local</a>
+			</li>
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">events &amp; activities</a>
+			</li>
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">sports &amp; fitness</a>
+			</li>
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">health &amp; beauty</a>
+			</li>
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">services</a>
+			</li>
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">families</a>
+			</li>
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">at home</a>
+			</li>
+		</ul>
+	</nav>
 </div>
+
+<main>
+  
+  
+</main>

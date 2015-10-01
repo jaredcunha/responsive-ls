@@ -1,0 +1,17 @@
+@import "bourbon/bourbon";
+@import "_modules/_all";
+
+// Full site overlay. Used with modals and flyout nav
+.overlay {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.5);
+	top: 0;
+	left: 0;
+}
+
+// Grid wrapper
+.grid-wrapper {
+	@include rem-fallback(padding, 0, $gridPadding); 
+}

@@ -1,27 +1,61 @@
-<header class="site-header">
+<header class="main-site-header">
 
-  <div class="wrapper">
+  <div class="top-bar">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
+    <div class="grid-wrapper">
+    
+      <h1 class="site-logo"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/assets/images/svg/logo.svg" alt="{{ site.title }}"></a></h1>
+      
+      <div class="nav-block">
+        <h2 class="current-section"><a href="#" id="navMenusToggle"  class="nav-menus-toggle">local</a></h2>
+        <div id="navMenus" class="nav-menus">
+          <a href="#" id="closeNav" class="close-nav">close</a>
+          <nav  class="nav-verticals">
+            <ul class="nav-verticals__list">
+              <li class="nav-verticals__item">
+                <a class="nav-verticals__link" href="#">local</a>
+              </li>
+              <li class="nav-verticals__item">
+                <a class="nav-verticals__link" href="#">escapes</a>
+              </li>
+              <li class="nav-verticals__item">
+                <a class="nav-verticals__link" href="#">shop</a>
+              </li>
+              <li class="nav-verticals__item">
+                <a class="nav-verticals__link" href="#">gifts</a>
+              </li>
+            </ul>
+          </nav>
+          <nav class="nav-utility">
+            <h3 class="nav-utility__heading">
+              <a href="#" class="nav-utility__toggle" id="navUtilityToggle">hi, jared</a>
+            </h3>
+            <ul class="nav-utility__list" id="navUtility">
+              <li class="nav-utility__item">
+                <a href="" class="nav-utility__link">my vouchers</a>
+              </li>
+              <li class="nav-utility__item">
+                <a href="" class="nav-utility__link">deal bucks</a>
+              </li>
+              <li class="nav-utility__item">
+                <a href="" class="nav-utility__link">purchase history</a>
+              </li>
+              <li class="nav-utility__item">
+                <a href="" class="nav-utility__link">preferences</a>
+              </li>
+              <li class="nav-utility__item">
+                <a href="" class="nav-utility__link">my account</a>
+              </li>
+              <li class="nav-utility__item">
+                <a href="" class="nav-utility__link">settings</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
-    </nav>
-
+      <div class="search">
+        
+      </div>
+    </div>
   </div>
-
 </header>

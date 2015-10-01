@@ -1,0 +1,36 @@
+@import "bourbon/bourbon";
+@import "_modules/_all";
+
+.subnav {
+	background: #f8f8f8;
+	display: flex;
+	&__list {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		overflow-x: scroll;
+		white-space: nowrap;
+		display: inline-block;
+		order: 2;
+		-webkit-overflow-scrolling: touch;
+		&--current {
+			width: auto;
+			-webkit-overflow-scrolling: none;
+			white-space: nowrap;
+			order: 1;
+			flex: 0 0 auto;
+			.subnav__link {
+				color: #333;
+				font-weight: bold;
+			}
+		}
+	}
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		padding: 2em;
+		display: inline-block;
+		color: #666;
+	}
+}
