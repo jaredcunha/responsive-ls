@@ -10390,3 +10390,6 @@ $(navUtilityToggle).on('click', function(){
 $(".subnav__list").on("touchstart",function(){
   $(".subnav__list--current").addClass('interacting');
 });
+$(".subnav__list").on("touchend",function(){
+  $(".subnav__list--current").removeClass('interacting');
+});
