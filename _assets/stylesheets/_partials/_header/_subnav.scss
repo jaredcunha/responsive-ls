@@ -4,6 +4,7 @@
 .subnav {
 	background: #f8f8f8;
 	display: flex;
+	position: relative;
 	&__list {
 		list-style: none;
 		padding: 0;
@@ -19,6 +20,9 @@
 			white-space: nowrap;
 			order: 1;
 			flex: 0 0 auto;
+			&.interacting {
+				background:red;
+			}
 			.subnav__link {
 				color: #333;
 				font-weight: bold;

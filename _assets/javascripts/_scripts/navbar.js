@@ -33,3 +33,8 @@ $(navMenusToggle).add(closeNav).on('click', function(){
 $(navUtilityToggle).on('click', function(){
 	toggleUtilityNav();
 });
+
+
+$(".subnav__list").on("touchmove",function(){
+  $(".subnav__list--current").addClass('interacting');
+});

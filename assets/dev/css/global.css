@@ -691,6 +691,7 @@ a {
 .subnav {
   background: #f8f8f8;
   display: flex;
+  position: relative;
 }
 
 .subnav__list {
@@ -710,6 +711,10 @@ a {
   white-space: nowrap;
   order: 1;
   flex: 0 0 auto;
+}
+
+.subnav__list--current.interacting {
+  background: red;
 }
 
 .subnav__list--current .subnav__link {
