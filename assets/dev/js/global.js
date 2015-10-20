@@ -10350,6 +10350,27 @@ return jQuery;
 
 }));
 
+toggleOverlay = function() {
+	var overlay = $('#overlay');
+	if ( $(overlay).length ) {
+		$(overlay).remove();
+	} else {
+		body.append('<div id="overlay" class="overlay"></div>');
+	}
+};
+var refinementsFormToggle = $('#refinementsFormToggle');
+var refinementsForm = $('#refinementsForm');
+var refinementsFormClose = $('#refinementsFormClose');
+
+$(refinementsFormToggle).on('click', function(){
+	toggleOverlay();
+	refinementsForm.toggleClass('open');
+});
+
+$(refinementsFormClose).on('click', function(){
+	toggleOverlay();
+	refinementsForm.removeClass('open');
+});
 // This JS will toggle the nav menu
 toggleNavMenus = function() {
 	$(navMenus).toggleClass('open');
@@ -10359,15 +10380,6 @@ toggleNavMenus = function() {
 
 toggleUtilityNav = function() {
 	$(navUtility).toggleClass('open');
-};
-
-toggleOverlay = function() {
-	var overlay = $('#overlay');
-	if ( $(overlay).length ) {
-		$(overlay).remove();
-	} else {
-		body.append('<div id="overlay" class="overlay"></div>');
-	}
 };
 
 var navMenusToggle = $('#navMenusToggle');

@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="subnav-categories">
+<div class="block block--subnav">
 	<nav class="subnav">
 		<ul class="subnav__list subnav__list--current">
 			<li class="subnav__item">
@@ -12,6 +12,9 @@ layout: default
 		<ul class="subnav__list">
 			<li class="subnav__item">
 				<a href="#" class="subnav__link">all local</a>
+			</li>
+			<li class="subnav__item">
+				<a href="#" class="subnav__link">restaurants</a>
 			</li>
 			<li class="subnav__item">
 				<a href="#" class="subnav__link">events &amp; activities</a>
@@ -36,6 +39,120 @@ layout: default
 </div>
 
 <main>
-  
-  
+	<div class="block block--refinements">
+		<div class="grid-wrapper">
+			<div class="refinements">
+				<h2 class="refinements__main-heading">
+					<a href="#" class="refinements-form-toggle" id="refinementsFormToggle">refine results</a>
+				</h2>
+				<form action="#" class="refinements__form" id="refinementsForm">
+					<div class="refinements-set">
+						<h3 class="refinements-set__heading">
+							<a href="#" class="refinements-set__toggle">cuisine</a>
+						</h3>
+						<fieldset class="refinement-options">
+							<ul class="refinement-options__facet-list">
+								<li class="refinement-options__facet-item">
+									<input id="f1"type="checkbox">
+									<label for="f1">american</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="f2"type="checkbox">
+									<label for="f2">burgers</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="f3"type="checkbox">
+									<label for="f3">coffee</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="f4"type="checkbox">
+									<label for="f4">european</label>
+								</li>
+
+								<li class="refinement-options__facet-item">
+									<input id="f5"type="checkbox">
+									<label for="f5">fast food</label>
+								</li>
+
+								<li class="refinement-options__facet-item">
+									<input id="f6"type="checkbox">
+									<label for="f6">german</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="f7"type="checkbox">
+									<label for="f7">italian</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="f8"type="checkbox">
+									<label for="f8">mediterranean</label>
+								</li>
+
+								<li class="refinement-options__facet-item">
+									<input id="f9"type="checkbox">
+									<label for="f9">mexican</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="f10"type="checkbox">
+									<label for="f10">texican</label>
+								</li>
+
+								<li class="refinement-options__facet-item">
+									<input id="f11"type="checkbox">
+									<label for="f11">vietnamese</label>
+								</li>
+
+								<li class="refinement-options__facet-item">
+									<input id="f12"type="checkbox">
+									<label for="f12">zimbabwean</label>
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+					<div class="refinements-set">
+						<h3 class="refinements-set__heading">
+							<a href="#" class="refinements-set__toggle">show cashback at</a>
+						</h3>
+						<fieldset class="refinement-options">
+							<ul class="refinement-options__facet-list">
+								<li class="refinement-options__facet-item">
+									<input id="d1"type="checkbox">
+									<label for="d1">above 10%</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="d2"type="checkbox">
+									<label for="d2">above 20%</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="d3"type="checkbox">
+									<label for="d3">above 30%</label>
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+					<div class="refinements-set">
+						<h3 class="refinements-set__heading">
+							<a href="#" class="refinements-set__toggle">price</a>
+						</h3>
+						<fieldset class="refinement-options">
+							<ul class="refinement-options__facet-list">
+								<li class="refinement-options__facet-item">
+									<input id="p1"type="checkbox">
+									<label for="p1">$</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="p2"type="checkbox">
+									<label for="p2">$$</label>
+								</li>
+								<li class="refinement-options__facet-item">
+									<input id="p3"type="checkbox">
+									<label for="p3">$$$</label>
+								</li>
+							</ul>
+						</fieldset>
+					</div>
+					<a href="#" class="refinements__form__close" id="refinementsFormClose">close</a>
+				</form>
+			</div>
+		</div>
+	</div>   
 </main>

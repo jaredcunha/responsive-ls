@@ -1,0 +1,97 @@
+@import "bourbon/bourbon";
+@import "_modules/_all";
+
+// This is the main refinements box
+.refinements {
+	margin: .5em 0;
+	@include respond-to(expansionA) {
+		margin: 1.5em 0;
+		border: 1px solid #f2f2f2;
+		border-radius: 4px;
+		padding: .5em 1.2em;
+	}
+	&__main-heading {
+		@include rem_fallback(font-size, 1.2);
+	}
+	&__form {
+		@include hide;
+		@include transform(scale(1.2));
+		@include transition(transform .7s $niceEasing, opacity .7s $niceEasing);
+		opacity: 0;
+		background: #fff;
+		overflow-y: scroll;
+		width: 90%;
+		height: 90%;
+		margin: 5%;
+		z-index: 5000;
+		padding: 20px;
+		&.open {
+			@include transform(scale(1));
+			opacity: 1;
+			position: fixed;
+			left: 0;
+			top: 0;
+		}
+		@include respond-to(expansionA) {
+			@include transform(scale(1));
+			@include transition(none);
+			opacity: 1;
+			position: static;
+			width: 100%;
+			height: auto;
+			padding: 0;
+			overflow: visible;
+			margin: 0;
+		}
+	}
+}
+
+// Toggle for the close button. Should only be visible on mobile
+.refinements__form__close {
+	@include respond-to(expansionA) {
+		display: none;
+	}
+}
+
+// Toggle to open the refinements box. Should only be visible on mobile.
+.refinements-form-toggle {
+	@include respond-to(expansionA) {
+		@include hide;
+	}
+}
+
+// Generic set of refinements
+.refinements-set {
+	@include respond-to(expansionA) {
+		display: inline-block;
+		margin-right: 2em;
+		position: relative;
+	}
+}
+
+// Generic options of refinements
+.refinement-options {
+	&__facet-list {
+		list-style: none;
+		padding: 0;
+		@include respond-to(expansionA) {
+			@include hide;
+			.refinements-set:hover & {
+				left: 0;
+				width: 20em;
+				border: 1px solid $lightGreyBorder;
+				z-index: 200px;
+				height: 150px;
+				overflow-y: scroll;
+				padding: 1.2em;
+				top: 10px;
+				background: #fff;
+				z-index: 2000;
+			}
+		}
+	}
+	&__facet-item {
+		@include rem_fallback(font-size, 1.4);
+		margin: .5em 0;
+	}
+}
