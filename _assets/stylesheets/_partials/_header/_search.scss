@@ -1,0 +1,14 @@
+@import "bourbon/bourbon";
+@import "_modules/_all";
+
+.search {
+	float: right;
+}
+
+// Search will not be funcitonal for now
+.search-placeholder {
+	&:before {
+		color: #999;
+		font-size: 2em;
+	}
+}

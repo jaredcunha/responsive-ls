@@ -4,6 +4,7 @@ var gulp = require('gulp'),
 	sass      = require('gulp-sass'),
 	maps      = require('gulp-sourcemaps'),
 	minifycss = require('gulp-minify-css'),
+    cssGlobbing = require('gulp-css-globbing'),
 	uglify = require('gulp-uglify'),
     rename = require('gulp-rename'),
     concat = require('gulp-concat'),
@@ -14,12 +15,12 @@ var gulp = require('gulp'),
 gulp.task('compileSass', function (){
     gulp.src(['./_assets/stylesheets/global.scss'])
         .pipe(maps.init())
+        .pipe(cssGlobbing({extensions: ['.scss']}))
         .pipe(sass({
             includePaths: require('node-bourbon').includePaths,
             errLogToConsole: false,
             outputStyle: 'expanded'
         }))
-
         .pipe(gulp.dest('./assets/dev/css'))
         .pipe(minifycss())
         .pipe(maps.write('./'))

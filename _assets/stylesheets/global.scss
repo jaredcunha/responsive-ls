@@ -10,9 +10,7 @@
 @import "_partials/_base/symbol_font";
 
 // Header: normailze and resets 
-@import "_partials/_header/navbar";
-@import "_partials/_header/top_bar";
-@import "_partials/_header/subnav";
+@import "_partials/_header/*";
 
 // Browsing
-@import "_partials/_browsing/refinements"
+@import "_partials/_browsing/*"
