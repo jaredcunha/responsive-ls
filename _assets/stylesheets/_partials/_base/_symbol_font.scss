@@ -1,0 +1,333 @@
+@import "bourbon/bourbon";
+
+/*
+==========================================================================================
+ICON FONT
+========================================================================================== */
+@include font-face("livingsocialsymbolsmobile", "../fonts/livingsocialsymbolsmobile-webfont", $file-formats: eot ttf svg woff);
+
+
+.ls-i-content{
+  font-family: livingsocialsymbolsmobile;
+  margin-right: 10px;
+  font-size:140%;
+  speak: none;
+}
+
+/*Initial*/
+.ls-i::before {
+  font-family: livingsocialsymbolsmobile;
+  margin-right: 10px;
+  font-size:140%;
+  speak: none;
+}
+
+/*Replace text completely*/
+.ls-i-replace {
+  text-indent: -999em;
+  display: inline-block;
+  position: relative;
+  min-width: 1em;
+  max-width: 1em;
+}
+
+.ls-i-replace::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  text-indent: 0;
+  margin-right: 0;
+}
+
+/*Characters*/
+.ls-i-twitter:before {
+  content: "a";
+}
+
+.ls-i-facebook:before {
+  content: "b";
+}
+
+.ls-i-tandd:before {
+  content: "c";
+}
+
+.ls-i-speech:before {
+  content: "d";
+}
+
+.ls-i-heart:before {
+  content: "e";
+}
+
+.ls-i-gear:before {
+  content: "f";
+}
+
+.ls-i-pin:before {
+  content: "g";
+}
+
+.ls-i-camera:before {
+  content: "h";
+}
+
+.ls-i-gift:before {
+  content: "i";
+}
+
+.ls-i-asterisk:before {
+  content: "j";
+}
+
+.ls-i-clock:before {
+  content: "k";
+}
+
+.ls-i-silverware:before {
+  content: "l";
+}
+
+.ls-i-star:before {
+  content: "m";
+}
+
+.ls-i-suitcase:before {
+  content: "n";
+}
+
+.ls-i-locator:before {
+  content: "o";
+}
+
+.ls-i-lightbulb:before {
+  content: "p";
+}
+
+.ls-i-hamburger:before {
+  content: "q";
+}
+
+.ls-i-cart:before {
+  content: "r";
+}
+
+.ls-i-phone:before {
+  content: "s";
+}
+
+.ls-i-feet:before {
+  content: "t";
+}
+
+.ls-i-magnifyingglass:before {
+  content: "u";
+}
+
+.ls-i-tag:before {
+  content: "v";
+}
+
+.ls-i-check:before {
+  content: "w";
+}
+
+.ls-i-add:before {
+  content: "x";
+}
+
+.ls-i-x:before {
+  content: "y";
+}
+
+.ls-i-mobile:before {
+  content: "z";
+}
+
+.ls-i-wallet:before {
+  content: "A";
+}
+
+.ls-i-group:before {
+  content: "B";
+}
+
+.ls-i-individual:before {
+  content: "C";
+}
+
+.ls-i-earth:before {
+  content: "D";
+}
+
+.ls-i-shop:before {
+  content: "E";
+}
+
+.ls-i-email:before {
+  content: "F";
+}
+
+.ls-i-voucher:before {
+  content: "G";
+}
+
+.ls-i-checkin:before {
+  content: "H";
+}
+
+.ls-i-checkout:before {
+  content: "I";
+}
+
+.ls-i-home:before {
+  content: "J";
+}
+
+.ls-i-flame:before {
+  content: "K";
+}
+
+.ls-i-coupon:before {
+  content: "L";
+}
+
+.ls-i-compass:before {
+  content: "M";
+}
+
+.ls-i-menu:before {
+  content: "N";
+}
+
+.ls-i-clock-outline:before {
+  content: "O";
+}
+
+.ls-i-google-plus:before {
+  content: "P";
+}
+
+.ls-i-pinterest:before {
+  content: "Q";
+}
+
+.ls-i-paypal:before {
+  content: "R";
+}
+
+.ls-i-creditcard:before {
+  content: "S";
+}
+
+.ls-i-lightning:before {
+  content: "T";
+}
+
+.ls-i-crown:before {
+  content: "U";
+}
+
+.ls-i-truck:before {
+  content: "V";
+}
+
+.ls-i-print:before {
+  content: "W";
+}
+
+.ls-i-arrow-down:before {
+  content: "X";
+}
+
+.ls-i-arrow-up:before {
+  content: "Y";
+}
+
+.ls-i-baby-bottle:before {
+  content: "Z";
+}
+
+.ls-i-baby-bottle-outline:before {
+  content: "1";
+}
+
+.ls-i-box-outline:before {
+  content: "2";
+}
+
+.ls-i-diamond:before {
+  content: "3";
+}
+
+.ls-i-diamond-outline:before {
+  content: "4";
+}
+
+.ls-i-group-outline:before {
+  content: "5";
+}
+
+.ls-i-headphones:before {
+  content: "6";
+}
+
+.ls-i-headphones-outline:before {
+  content: "7";
+}
+
+.ls-i-heels:before {
+  content: "8";
+}
+
+.ls-i-piggy-bank:before {
+  content: "9";
+}
+
+.ls-i-piggy-bank-outline:before {
+  content: "0";
+}
+
+.ls-i-tie:before {
+  content: ".";
+}
+
+.ls-i-tie-outline:before {
+  content: "?";
+}
+
+.ls-i-heels-outline:before {
+  content: "!";
+}
+
+.ls-i-socket-outline:before {
+  content: ";";
+}
+
+.ls-i-gift2:before {
+  content: "-";
+}
+
+.ls-i-link:before {
+  content: "+";
+}
+
+.ls-i-map:before {
+  content: "=";
+}
+
+.ls-i-list:before {
+  content: "*";
+}
+
+.ls-i-filter:before {
+  content: "/";
+}
+
+.ls-i-calendar:before {
+  content: "$";
+}
+
+.ls-i-finder:before {
+  content: "%";
+}

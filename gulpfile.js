@@ -30,6 +30,8 @@ gulp.task('compileSass', function (){
 gulp.task('move', function(){
     gulp.src('./_assets/images/*.svg')
         .pipe(gulp.dest('./assets/images/svg'));
+    gulp.src('./_assets/fonts/*.*')
+        .pipe(gulp.dest('./assets/fonts'));
 });
 
 // Concat Javascripts
