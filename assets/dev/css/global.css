@@ -884,6 +884,7 @@ ICON FONT
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
   z-index: 60000;
+  -webkit-overflow-scrolling: touch;
 }
 
 .close-nav {

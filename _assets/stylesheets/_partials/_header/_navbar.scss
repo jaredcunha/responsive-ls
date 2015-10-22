@@ -62,6 +62,7 @@ $navigationWidth: 27.5em;
 		box-shadow: 0 0 5px rgba(0,0,0,.5);
 		overflow-y: scroll;
 		z-index: $z-flyout-menu;
+		-webkit-overflow-scrolling: touch;
 	}	
 }
 
