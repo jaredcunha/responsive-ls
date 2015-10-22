@@ -1249,6 +1249,7 @@ ICON FONT
   z-index: 100000;
   padding: 20px;
   order: 1;
+  -webkit-overflow-scrolling: touch;
 }
 
 .refinements__form.open {

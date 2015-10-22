@@ -40,6 +40,7 @@
 		z-index: $z-modal;
 		padding: 20px;
 		order: 1;
+		-webkit-overflow-scrolling: touch;
 		&.open {
 			@include transform(scale(1));
 			opacity: 1;
