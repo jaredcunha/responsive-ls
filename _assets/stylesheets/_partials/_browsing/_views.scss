@@ -13,7 +13,7 @@
 	opacity: 0;
 	@include respond-to(expansionA) {
 		@include order(1);
-		@include flex-grow(1);
+		@include flex-basis(100%);
 		opacity: 1;
 		position: static;
 	}
@@ -35,7 +35,7 @@
 	opacity: 0;
 	@include respond-to(expansionA) {
 		@include order(2);
-		@include flex-grow(1);
+		@include flex-basis(100%);
 		opacity: 1;
 		position: static;
 	}

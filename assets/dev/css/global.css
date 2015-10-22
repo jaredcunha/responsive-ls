@@ -1630,10 +1630,10 @@ body::before {
     -moz-order: 1;
     order: 1;
     -ms-flex-order: 1;
-    -webkit-flex-grow: 1;
-    -moz-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex-positive: 1;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
     opacity: 1;
     position: static;
   }
@@ -1668,10 +1668,10 @@ body::before {
     -moz-order: 2;
     order: 2;
     -ms-flex-order: 2;
-    -webkit-flex-grow: 1;
-    -moz-flex-grow: 1;
-    flex-grow: 1;
-    -ms-flex-positive: 1;
+    -webkit-flex-basis: 100%;
+    -moz-flex-basis: 100%;
+    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
     opacity: 1;
     position: static;
   }
