@@ -815,8 +815,9 @@ ICON FONT
 
 @media only screen and (min-width: 680px) {
   .nav-block {
-    position: static;
+    position: relative;
     float: left;
+    z-index: 200;
   }
 }
 
@@ -1134,7 +1135,6 @@ ICON FONT
   text-align: center;
   position: relative;
   border-bottom: 1px solid #979797;
-  z-index: 200;
 }
 
 .top-bar::after {

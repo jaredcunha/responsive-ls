@@ -17,8 +17,9 @@ $navigationWidth: 27.5em;
 	left: 0;
 	top: 0;
 	@include respond-to(expansionA) {
-		position: static;
+		position: relative;
 		float: left;
+		z-index: 200;
 	}
 }
 
