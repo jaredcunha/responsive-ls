@@ -22,6 +22,7 @@ $(inventoryToggleMap).on('click', function(){
 	$(this).addClass("active");
 	browseMap.addClass("in-view");
 	browseList.removeClass("in-view");
+	console.log("Map Loaded");
 });
 
 

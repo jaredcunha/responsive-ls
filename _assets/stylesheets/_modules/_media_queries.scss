@@ -9,3 +9,14 @@
     @media only screen and (min-width: 820px) { @content; }
   }
 }
+
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+  @include respond-to(expansionA) {
+  	content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+  @include respond-to(expansionB) {
+  	content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}

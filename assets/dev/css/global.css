@@ -404,6 +404,23 @@ th {
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -441,6 +458,23 @@ fieldset {
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 .overlay {
   position: fixed;
   width: 100%;
@@ -801,6 +835,23 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 /* ===============================
 
 	CSS for the navigation bar
@@ -1027,6 +1078,23 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 .search {
   float: right;
 }
@@ -1045,6 +1113,23 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 .subnav {
   background: #f8f8f8;
   display: -webkit-box;
@@ -1121,6 +1206,23 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 /* ===============================
 
 	CSS for the top bar
@@ -1165,6 +1267,23 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 .inventory-manipulation {
   padding-top: 2em;
   margin: .5em 0;
@@ -1420,6 +1539,23 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 .inventory-list {
   margin: 0;
   padding: 0;
@@ -1447,6 +1583,23 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
+body::before {
+  display: none;
+  content: '{ "current": "default", "all": ["default"] }';
+}
+
+@media only screen and (min-width: 680px) {
+  body::before {
+    content: '{ "current": "expansionA", "all": ["default", "expansionA"] }';
+  }
+}
+
+@media only screen and (min-width: 820px) {
+  body::before {
+    content: '{ "current": "expansionB", "all": ["default", "expansionA", "expansionB"] }';
+  }
+}
+
 @media only screen and (min-width: 680px) {
   .inventory {
     display: -webkit-box;
