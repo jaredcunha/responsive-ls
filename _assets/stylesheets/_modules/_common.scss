@@ -2,3 +2,9 @@
 	position: absolute;
 	left: -99999em;
 }
+
+// z-indexes
+$z-modal: 100000;
+$z-flyout-menu: 60000;
+$z-overlay: 50000;
+$z-popup-menu: 40000;

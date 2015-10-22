@@ -1,17 +1,31 @@
 @import "bourbon/bourbon";
-@import "_modules/_all";
+@import "_modules/all";
+
+// Contains all inventory manipulation
+.inventory-manipulation {
+	padding-top: 2em;
+	margin: .5em 0;
+	&__wrapper {
+		@include display(flex);
+		@include justify-content(space-between);
+		@include align-items(baseline);
+		@include respond-to(expansionA) {
+			margin: 1.5em 0;
+			border: 1px solid #f2f2f2;
+			border-radius: 4px;
+			padding: .5em 1.2em;
+		}
+	}
+}
 
 // This is the main refinements box
 .refinements {
-	margin: .5em 0;
-	@include respond-to(expansionA) {
-		margin: 1.5em 0;
-		border: 1px solid #f2f2f2;
-		border-radius: 4px;
-		padding: .5em 1.2em;
-	}
+	@include order(1);
 	&__main-heading {
 		@include rem_fallback(font-size, 1.2);
+		@include respond-to(expansionA) {
+			@include hide;
+		}
 	}
 	&__form {
 		@include hide;
@@ -23,8 +37,9 @@
 		width: 90%;
 		height: 90%;
 		margin: 5%;
-		z-index: 5000;
+		z-index: $z-modal;
 		padding: 20px;
+		order: 1;
 		&.open {
 			@include transform(scale(1));
 			opacity: 1;
@@ -48,6 +63,14 @@
 
 // Toggle for the close button. Should only be visible on mobile
 .refinements__form__close {
+	@include rem_fallback(font-size, 1.6);
+	
+	text-align: center;
+	background: #999;
+	color: #fff;
+	display: block;
+	width: 100%;
+	padding: 1em 0;
 	@include respond-to(expansionA) {
 		display: none;
 	}
@@ -62,10 +85,31 @@
 
 // Generic set of refinements
 .refinements-set {
+	margin-bottom: 2em;
 	@include respond-to(expansionA) {
 		display: inline-block;
-		margin-right: 2em;
 		position: relative;
+		margin-right: 10em;
+		margin-bottom: 0;
+	}
+	&__heading {
+		margin: 0;
+		padding: .5em 0;
+		position: relative;
+		&:after {
+			@include respond-to(expansionA) {
+				content: "";
+				width: 0; 
+				height: 0; 
+				border-left: .5em solid transparent;
+				border-right: .5em solid transparent;
+				border-top: .5em solid #999;
+				position: absolute;
+				right: -1.5em;
+				top: 1em;
+				opacity: .5;
+			}
+		}
 	}
 }
 
@@ -93,5 +137,28 @@
 	&__facet-item {
 		@include rem_fallback(font-size, 1.4);
 		margin: .5em 0;
+	}
+}
+
+.inventory-sort {
+	@include order(2);
+	font-size: 1.2em;
+}
+
+//Inventory Toggles
+.inventory-view-toggle {
+	@include order(2);
+	@include respond-to(expansionA) {
+		display: none;
+	}
+	&__item {
+		display: inline-block;
+		padding: 1em;
+		border: 1px solid #f2f2f2;
+		font-size: 1.2em;
+		border-radius: 4px;
+		&.active {
+			color: #000;
+		}
 	}
 }

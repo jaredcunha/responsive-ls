@@ -1,0 +1,46 @@
+@import "bourbon/bourbon";
+@import "_modules/all";
+
+.inventory {
+	@include respond-to(expansionA) {
+		@include display(flex);
+	}
+}
+
+.browse-list {
+	@include transition(opacity 1s $niceEasing);
+	@include hide;
+	opacity: 0;
+	@include respond-to(expansionA) {
+		@include order(1);
+		@include flex-grow(1);
+		opacity: 1;
+		position: static;
+	}
+	&.in-view {
+		opacity: 1;
+		position: static
+	}
+}
+
+.browse-map {
+	@include transition(opacity 1s $niceEasing);
+	@include hide;
+	text-align: center;
+	background: #f2f2f2;
+	font-size: 20px;
+	font-weight: bold; 
+	color: #666;
+	padding: 100px 0;
+	opacity: 0;
+	@include respond-to(expansionA) {
+		@include order(2);
+		@include flex-grow(1);
+		opacity: 1;
+		position: static;
+	}
+	&.in-view {
+		opacity: 1;
+		position: static;
+	}
+}

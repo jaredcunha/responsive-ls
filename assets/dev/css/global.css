@@ -424,10 +424,12 @@ body.has-nav-open {
 
 a {
   text-decoration: none;
+  color: #999;
 }
 
 fieldset {
   border: none;
+  padding: 0;
 }
 
 /* ==========================================================================
@@ -443,9 +445,10 @@ fieldset {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.8);
   top: 0;
   left: 0;
+  z-index: 50000;
 }
 
 .grid-wrapper {
@@ -467,7 +470,7 @@ ICON FONT
 .ls-i-content {
   font-family: livingsocialsymbolsmobile;
   margin-right: 10px;
-  font-size: 140%;
+  font-size: 100%;
   speak: none;
 }
 
@@ -490,8 +493,8 @@ ICON FONT
 
 .ls-i-replace::before {
   position: absolute;
-  left: 0;
-  top: 0;
+  left: -0.1em;
+  top: -0.2em;
   text-indent: 0;
   margin-right: 0;
 }
@@ -824,19 +827,6 @@ ICON FONT
   color: #666;
   position: relative;
   padding-left: 1.25em;
-  margin-left: 1.2em;
-}
-
-.nav-menus-toggle:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.25em;
-  width: .5em;
-  height: 0.1em;
-  top: 1em;
-  background: black;
-  box-shadow: 0 0.25em 0 0 black, 0 0.5em 0 0 black;
 }
 
 @media only screen and (min-width: 680px) {
@@ -892,6 +882,15 @@ ICON FONT
   transform: translate3d(0, 0, 0);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   overflow-y: scroll;
+  z-index: 60000;
+}
+
+.close-nav {
+  position: absolute;
+  color: #999;
+  right: 1em;
+  top: 1em;
+  font-size: 2em;
 }
 
 @media only screen and (min-width: 680px) {
@@ -909,11 +908,24 @@ ICON FONT
 
 .nav-verticals__list {
   list-style: none;
+  margin-top: 5em;
+  padding: 0 2em;
+}
+
+@media only screen and (min-width: 680px) {
+  .nav-verticals__list {
+    margin-top: 0;
+    padding: 0;
+  }
 }
 
 .nav-verticals__item {
   font-size: 25.6px;
   font-size: 1.6rem;
+  padding: 0;
+  margin: 0;
+  display: block;
+  padding: .25em 0;
 }
 
 @media only screen and (min-width: 680px) {
@@ -938,12 +950,25 @@ ICON FONT
   }
 }
 
+.nav-utility__heading {
+  padding: 2em 2em 0;
+  border-top: 1px solid #f2f2f2;
+}
+
+@media only screen and (min-width: 680px) {
+  .nav-utility__heading {
+    border-top: 0;
+    padding: 0;
+  }
+}
+
 .nav-utility__toggle {
   color: #9b9b9b;
 }
 
 .nav-utility__list {
   list-style: none;
+  padding: 0 2em;
 }
 
 @media only screen and (min-width: 680px) {
@@ -975,13 +1000,14 @@ ICON FONT
   padding: 0;
   margin: 0;
   display: block;
-  padding: 0.25em 1em;
+  padding: .25em 0;
 }
 
 @media only screen and (min-width: 680px) {
   .nav-utility__item {
     font-size: 22.4px;
     font-size: 1.4rem;
+    padding: 0.25em 1em;
   }
 }
 
@@ -1018,19 +1044,31 @@ ICON FONT
    ========================================================================== */
 .subnav {
   background: #f8f8f8;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   overflow: hidden;
 }
 
 .subnav__list {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
+  -webkit-order: 2;
+  -moz-order: 2;
+  order: 2;
+  -ms-flex-order: 2;
   list-style: none;
   padding: 0;
   margin: 0;
   overflow-x: scroll;
   white-space: nowrap;
   display: inline-block;
-  order: 2;
   -webkit-overflow-scrolling: touch;
 }
 
@@ -1038,10 +1076,16 @@ ICON FONT
   -webkit-transition: box-shadow 0.7s cubic-bezier(0.62, 0.28, 0.23, 0.99);
   -moz-transition: box-shadow 0.7s cubic-bezier(0.62, 0.28, 0.23, 0.99);
   transition: box-shadow 0.7s cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  box-ordinal-group: 1;
+  -webkit-order: 1;
+  -moz-order: 1;
+  order: 1;
+  -ms-flex-order: 1;
   width: auto;
   -webkit-overflow-scrolling: none;
   white-space: nowrap;
-  order: 1;
   flex: 0 0 auto;
   box-shadow: 0 0 5px transparent;
 }
@@ -1081,7 +1125,6 @@ ICON FONT
 ==================================*/
 .main-site-header {
   position: relative;
-  z-index: 3000;
 }
 
 .top-bar {
@@ -1119,12 +1162,41 @@ ICON FONT
 /* ==========================================================================
    MEDIA QUERIES
    ========================================================================== */
-.refinements {
+.inventory-manipulation {
+  padding-top: 2em;
   margin: .5em 0;
 }
 
+.inventory-manipulation__wrapper {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -moz-box-pack: justify;
+  box-pack: justify;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  -o-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: justify;
+  -webkit-box-align: baseline;
+  -moz-box-align: baseline;
+  box-align: baseline;
+  -webkit-align-items: baseline;
+  -moz-align-items: baseline;
+  -ms-align-items: baseline;
+  -o-align-items: baseline;
+  align-items: baseline;
+  -ms-flex-align: baseline;
+}
+
 @media only screen and (min-width: 680px) {
-  .refinements {
+  .inventory-manipulation__wrapper {
     margin: 1.5em 0;
     border: 1px solid #f2f2f2;
     border-radius: 4px;
@@ -1132,9 +1204,26 @@ ICON FONT
   }
 }
 
+.refinements {
+  -webkit-box-ordinal-group: 1;
+  -moz-box-ordinal-group: 1;
+  box-ordinal-group: 1;
+  -webkit-order: 1;
+  -moz-order: 1;
+  order: 1;
+  -ms-flex-order: 1;
+}
+
 .refinements__main-heading {
   font-size: 19.2px;
   font-size: 1.2rem;
+}
+
+@media only screen and (min-width: 680px) {
+  .refinements__main-heading {
+    position: absolute;
+    left: -99999em;
+  }
 }
 
 .refinements__form {
@@ -1154,8 +1243,9 @@ ICON FONT
   width: 90%;
   height: 90%;
   margin: 5%;
-  z-index: 5000;
+  z-index: 100000;
   padding: 20px;
+  order: 1;
 }
 
 .refinements__form.open {
@@ -1190,6 +1280,17 @@ ICON FONT
   }
 }
 
+.refinements__form__close {
+  font-size: 25.6px;
+  font-size: 1.6rem;
+  text-align: center;
+  background: #999;
+  color: #fff;
+  display: block;
+  width: 100%;
+  padding: 1em 0;
+}
+
 @media only screen and (min-width: 680px) {
   .refinements__form__close {
     display: none;
@@ -1203,11 +1304,37 @@ ICON FONT
   }
 }
 
+.refinements-set {
+  margin-bottom: 2em;
+}
+
 @media only screen and (min-width: 680px) {
   .refinements-set {
     display: inline-block;
-    margin-right: 2em;
     position: relative;
+    margin-right: 10em;
+    margin-bottom: 0;
+  }
+}
+
+.refinements-set__heading {
+  margin: 0;
+  padding: .5em 0;
+  position: relative;
+}
+
+@media only screen and (min-width: 680px) {
+  .refinements-set__heading:after {
+    content: "";
+    width: 0;
+    height: 0;
+    border-left: .5em solid transparent;
+    border-right: .5em solid transparent;
+    border-top: .5em solid #999;
+    position: absolute;
+    right: -1.5em;
+    top: 1em;
+    opacity: .5;
   }
 }
 
@@ -1239,4 +1366,161 @@ ICON FONT
   font-size: 22.4px;
   font-size: 1.4rem;
   margin: .5em 0;
+}
+
+.inventory-sort {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
+  -webkit-order: 2;
+  -moz-order: 2;
+  order: 2;
+  -ms-flex-order: 2;
+  font-size: 1.2em;
+}
+
+.inventory-view-toggle {
+  -webkit-box-ordinal-group: 2;
+  -moz-box-ordinal-group: 2;
+  box-ordinal-group: 2;
+  -webkit-order: 2;
+  -moz-order: 2;
+  order: 2;
+  -ms-flex-order: 2;
+}
+
+@media only screen and (min-width: 680px) {
+  .inventory-view-toggle {
+    display: none;
+  }
+}
+
+.inventory-view-toggle__item {
+  display: inline-block;
+  padding: 1em;
+  border: 1px solid #f2f2f2;
+  font-size: 1.2em;
+  border-radius: 4px;
+}
+
+.inventory-view-toggle__item.active {
+  color: #000;
+}
+
+/* ==========================================================================
+   VARS
+   ========================================================================== */
+/* Caculate the end grid details */
+/* Caculate the gutter */
+/* Calculate the column widths (12 columns) */
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+.inventory-list {
+  margin: 0;
+  padding: 0;
+}
+
+.inventory-list__item {
+  list-style: none;
+  margin: 0;
+  padding: 100px 0;
+  display: block;
+  width: 100%;
+  border: 1px solid #f2f2f2;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+}
+
+/* ==========================================================================
+   VARS
+   ========================================================================== */
+/* Caculate the end grid details */
+/* Caculate the gutter */
+/* Calculate the column widths (12 columns) */
+/* ==========================================================================
+   MEDIA QUERIES
+   ========================================================================== */
+@media only screen and (min-width: 680px) {
+  .inventory {
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.browse-list {
+  -webkit-transition: opacity 1s cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  -moz-transition: opacity 1s cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  transition: opacity 1s cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  position: absolute;
+  left: -99999em;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 680px) {
+  .browse-list {
+    -webkit-box-ordinal-group: 1;
+    -moz-box-ordinal-group: 1;
+    box-ordinal-group: 1;
+    -webkit-order: 1;
+    -moz-order: 1;
+    order: 1;
+    -ms-flex-order: 1;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    opacity: 1;
+    position: static;
+  }
+}
+
+.browse-list.in-view {
+  opacity: 1;
+  position: static;
+}
+
+.browse-map {
+  -webkit-transition: opacity 1s cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  -moz-transition: opacity 1s cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  transition: opacity 1s cubic-bezier(0.62, 0.28, 0.23, 0.99);
+  position: absolute;
+  left: -99999em;
+  text-align: center;
+  background: #f2f2f2;
+  font-size: 20px;
+  font-weight: bold;
+  color: #666;
+  padding: 100px 0;
+  opacity: 0;
+}
+
+@media only screen and (min-width: 680px) {
+  .browse-map {
+    -webkit-box-ordinal-group: 2;
+    -moz-box-ordinal-group: 2;
+    box-ordinal-group: 2;
+    -webkit-order: 2;
+    -moz-order: 2;
+    order: 2;
+    -ms-flex-order: 2;
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex-positive: 1;
+    opacity: 1;
+    position: static;
+  }
+}
+
+.browse-map.in-view {
+  opacity: 1;
+  position: static;
 }

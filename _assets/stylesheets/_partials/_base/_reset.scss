@@ -1,5 +1,5 @@
 @import "bourbon/bourbon";
-@import "_modules/_all";
+@import "_modules/all";
 
 * {
 	box-sizing: border-box;
@@ -20,8 +20,10 @@ body {
 
 a {
 	text-decoration: none;
+	color: #999;
 }
 
 fieldset {
 	border: none;
+	padding: 0;
 }

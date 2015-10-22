@@ -1,26 +1,26 @@
 @import "bourbon/bourbon";
-@import "_modules/_all";
+@import "_modules/all";
 
 .subnav {
 	background: #f8f8f8;
-	display: flex;
+	@include display(flex);
 	position: relative;
 	overflow: hidden;
 	&__list {
+		@include order(2);
 		list-style: none;
 		padding: 0;
 		margin: 0;
 		overflow-x: scroll;
 		white-space: nowrap;
 		display: inline-block;
-		order: 2;
 		-webkit-overflow-scrolling: touch;
 		&--current {
 			@include transition(box-shadow .7s $niceEasing);
+			@include order(1);
 			width: auto;
 			-webkit-overflow-scrolling: none;
 			white-space: nowrap;
-			order: 1;
 			flex: 0 0 auto;
 			box-shadow: 0 0 5px rgba(0,0,0,0);
 			&.interacting {

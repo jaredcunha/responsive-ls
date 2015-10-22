@@ -1,5 +1,5 @@
 @import "bourbon/bourbon";
-@import "_modules/_all";
+@import "_modules/all";
 
 /* ===============================
 
@@ -29,19 +29,6 @@ $navigationWidth: 27.5em;
 	color: #666;
 	position: relative;
 	padding-left: 1.25em;
-	margin-left: 1.2em;
-	&:before {
-		content: "";
-		position: absolute;
-		left: 0;
-		top: 0.25em;
-		width: .5em;
-		height: 0.1em;
-		top: 1em;
-		background: black;
-		box-shadow: 0 0.25em 0 0 black,
-					0 0.5em 0 0 black;
-	}
 	@include respond-to(expansionA) {
 		@include hide;
 	}
@@ -73,11 +60,17 @@ $navigationWidth: 27.5em;
 		@include transform(translate3d(0, 0, 0));
 		box-shadow: 0 0 5px rgba(0,0,0,.5);
 		overflow-y: scroll;
+		z-index: $z-flyout-menu;
 	}	
 }
 
 
 .close-nav {
+	position: absolute;
+	color: #999;
+	right: 1em;
+	top: 1em;
+	font-size: 2em;
 	@include respond-to(expansionA) {
 		@include hide;
 	}
@@ -90,9 +83,19 @@ $navigationWidth: 27.5em;
 	}
 	&__list {
 		list-style: none;
+		margin-top: 5em;
+		padding: 0 2em;
+		@include respond-to(expansionA) {
+			margin-top: 0;
+			padding: 0;
+		}
 	}
 	&__item {
 		@include rem-fallback(font-size, 1.6);
+		padding: 0;
+		margin: 0;
+		display: block;
+		padding: .25em 0;
 		@include respond-to(expansionA) {
 			display: inline-block;
 			padding: 0 1em;
@@ -110,11 +113,20 @@ $navigationWidth: 27.5em;
 	@include respond-to(expansionA) {
 		display: inline-block;
 	}
+	&__heading {
+		padding: 2em 2em 0;
+		border-top: 1px solid #f2f2f2;
+		@include respond-to(expansionA) {
+			border-top: 0;
+			padding: 0;
+		}	
+	}
 	&__toggle {
 		color: #9b9b9b;
 	}
 	&__list {
 		list-style: none;
+		padding: 0 2em;
 		@include respond-to(expansionA) {
 			@include hide;
 			@include transition(opacity .7s $niceEasing);
@@ -139,9 +151,10 @@ $navigationWidth: 27.5em;
 		padding: 0;
 		margin: 0;
 		display: block;
-		padding: .25em 1em;
+		padding: .25em 0;
 		@include respond-to(expansionA) {
 			@include rem-fallback(font-size, 1.4);
+			padding: .25em 1em;
 		}
 	}
 	&__link {
