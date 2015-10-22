@@ -142,7 +142,7 @@ $navigationWidth: 27.5em;
 			&.open {
 				left: 0;
 				opacity: 1;
-				
+				z-index: $z-popup-menu;
 			}
 		}
 	}

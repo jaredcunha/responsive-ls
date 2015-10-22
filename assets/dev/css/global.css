@@ -991,6 +991,7 @@ ICON FONT
   .nav-utility__list.open {
     left: 0;
     opacity: 1;
+    z-index: 40000;
   }
 }
 
@@ -1133,6 +1134,7 @@ ICON FONT
   text-align: center;
   position: relative;
   border-bottom: 1px solid #979797;
+  z-index: 200;
 }
 
 .top-bar::after {
