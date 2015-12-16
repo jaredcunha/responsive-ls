@@ -1,3 +1,10 @@
+var navMenusToggle = $('#navMenusToggle'),
+    navMenus = $('#navMenus'),
+    body = $('body'),
+    closeNav = $('#closeNav'),
+    navUtilityToggle = ('#navUtilityToggle'),
+    navUtility = ('#navUtility');
+
 // This JS will toggle the nav menu
 toggleNavMenus = function() {
 	$(navMenus).toggleClass('open');
@@ -8,14 +15,6 @@ toggleNavMenus = function() {
 toggleUtilityNav = function() {
 	$(navUtility).toggleClass('open');
 };
-
-var navMenusToggle = $('#navMenusToggle');
-var navMenus = $('#navMenus');
-var body = $('body');
-var closeNav = $('#closeNav');
-var navUtilityToggle = ('#navUtilityToggle');
-var navUtility = ('#navUtility');
-
 
 $(navMenusToggle).add(closeNav).on('click', function(){
 	toggleNavMenus();

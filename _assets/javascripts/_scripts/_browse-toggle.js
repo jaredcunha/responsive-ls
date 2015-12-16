@@ -1,8 +1,8 @@
-var inventoryToggleList = $('#inventoryToggleList');
-var inventoryToggleMap = $('#inventoryToggleMap');
-var inventoryViewToggleItem = $('.inventory-view-toggle__item');
-var browseList = $('#browseList');
-var browseMap = $('#browseMap');
+var inventoryToggleList = $('#inventoryToggleList'),
+		inventoryToggleMap = $('#inventoryToggleMap'),
+		inventoryViewToggleItem = $('.inventory-view-toggle__item'),
+		browseList = $('#browseList'),
+		browseMap = $('#browseMap');
 
 clearToggleSelection = function() {
 	inventoryViewToggleItem.removeClass("active");

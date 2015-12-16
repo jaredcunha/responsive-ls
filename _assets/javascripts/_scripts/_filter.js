@@ -1,6 +1,6 @@
-var refinementsFormToggle = $('#refinementsFormToggle');
-var refinementsForm = $('#refinementsForm');
-var refinementsFormClose = $('#refinementsFormClose');
+var refinementsFormToggle = $('#refinementsFormToggle'),
+    refinementsForm = $('#refinementsForm'),
+    refinementsFormClose = $('#refinementsFormClose');
 
 $(refinementsFormToggle).on('click', function(){
 	toggleOverlay();
